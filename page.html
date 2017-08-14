@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    div.head{
+      background-color: gray;
+    color: white;
+    margin: 40px 30px 0px 30px;
+    padding: 20px;
+    padding-top: 10px;
+    }
+    .picmove{
+    margin-left: 44px;
+    margin-top: -226px;
+    z-index: 1;
+    width: 408px;
+    height: 217px;
+    color: white;
+}
+
+
+    div.row{
+      background-color:lightgrey;
+      color:black;
+      margin: 0px 30px 0px 30px;
+      padding-left: 40px; 
+    }
+    div.hi{
+      background-color:lightslategrey;
+    color: white;
+    margin: 30px 15px 0px 30px;
+    padding-left: 20px;
+
+    }
+    div.body{
+      color: black;
+      margin: 0px 30px 0px 30px;
+    }
+    .notes{
+      background-color: gray;
+      margin-right: 50px;
+      
+    }
+  
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Home</a></li>
+      <li class="active"><a href="#">MyStory Films</a></li>
+      <li><a href="#">Why become a Partner at EY</a></li>
+      <li><a href="#">Partner Roles and Attributes</a></li>
+      <li><a href="#">Partner Measures and Rewards</a></li>
+      <li><a href="#">Internal Admissions</a></li>
+      <li><a href="#">Direct Admissions</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+    
+</nav>
+<div class="head">
+ <h1>MyStory: See our Partners as you've never seen them before</h1>
+ <p>As part of vision 2020, we have exciting plans to almost double the size of our Partnership. we want as many of these new partners to be one of you. To share insights into what it takes, Partners from across UK&I,in collaboration with /ey reporters, are sharing their professional and personal stories. see EY partners as you've never seen them before -as children, with their own children,sharing career highs and lows, and why they love being a Partner at EY. watch and enjoy!</p>
+  
+</div>
+    <div class="row">
+        <div class="col-sm-8">
+    <img src="iphone.png" style="width:496px;height:243px;z-index:0;">
+    <!-- carousal-->
+            
+<div class="container picmove" > 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="Benoit-Laclau.jpg" alt="Los Angeles" style="width:100%;">
+          <h4>Benoit-Laclau</h4>
+        </div>
+  
+        <div class="item">
+          <img src="Bob Forsyth.jpg" alt="Chicago" style="width:100%;">
+          <h4>Bob Forsyth</h4>
+        </div>
+      
+        <div class="item">
+          <img src="Cameron-Cartmell.jpg" alt="New york" style="width:100%;">
+          <h4>Cameron-Cartmell</h4>
+        </div>
+        <div class="item">
+            <img src="Amanda-Blackhall-OSullivan.jpg" alt="New york" style="width:100%;">
+            <h4>Amanda-Blackhall-OSullivan</h4>
+          </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      
+    </div>
+  </div>
+
+  
+  <!-- carousal ends -->
+        </div>
+<div class="col-sm-4">
+    <form>
+      <div class="hi">
+        <div class="form-group">    
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" id="usr" placeholder="Partner name">
+        </div>
+        <br>
+        <div class="form-group">
+      
+            <label for="sel1">Service line:</label>
+            <select class="form-control" id="sel1" placeholder="Select one">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            
+                <label for="key">keyword:</label>
+                <input type="Keyword Search" class="form-control" id="key" placeholder="Keyword">
+              </div>
+      </form>
+      <button type="button" class "btn" > Search</button>
+</div>
+    </div>
+<div class="col-sm-1">
+<button type="button" class="btn" >View all films</button>
+</div>
+<div class="col-sm-4">
+  <p>click here to see the winning films as voted for by our people and the highlights of the awards ceremony</p> 
+</div>
+      
+    </div>
+<div class="body">
+  <h2>MyStory film library</h2>
+  <div class="col-sm-8">
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+          <div class="card">
+              <img class="card-img-top" src="Amanda-Blackhall-OSullivan.jpg">
+              <div class="card-block">
+                  <h4 class="card-title">Tawshif Ahsan Khan</h4>
+                  
+                  <div class="card-text">
+                      Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.
+                  </div>
+      
+
+</div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+          <div class="card">
+              <img class="card-img-top" src="Andrew-Wollaston.jpg">
+              <div class="card-block">
+                  <h4 class="card-title">Andrew-Wollaston</h4>
+                  
+                  <div class="card-text">
+                      Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.
+                  </div>
+      
+
+</div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+          <div class="card">
+              <img class="card-img-top" src="Benoit-Laclau.jpg">
+              <div class="card-block">
+                  <h4 class="card-title">Benoit-Laclau</h4>
+                  
+                  <div class="card-text">
+                      Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.
+                  </div>
+      
+
+</div>
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="container notes">
+      <h2>Looking for someone in particular?</h2>
+      <p>Search here for stories form partners in your service line or enter in keywords to find other stories that you'd like to view.</p>
+      <h2>Search by</h2>
+      <div class="form-group">    
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" id="usr" placeholder="Partner name">
+        </div>
+        <br>
+        <div class="form-group">
+      
+            <label for="sel1">Service line:</label>
+            <select class="form-control" id="sel1" placeholder="Select one">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            
+                <label for="key">keyword:</label>
+                <input type="Keyword Search" class="form-control" id="key" placeholder="Keyword">
+              </div>
+<p>e.g. female,LGBT,International experience etc.
+
+  </div>
+</div>
+</body>
+</html>
