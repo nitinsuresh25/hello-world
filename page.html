@@ -7,21 +7,28 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
   <style>
     div.head{
       background-color: gray;
     color: white;
-    margin: 40px 30px 0px 30px;
+    margin: 73px 30px 0px 30px;
     padding: 20px;
     padding-top: 10px;
     }
     .picmove{
-    margin-left: 44px;
-    margin-top: -226px;
+    margin-left: 63px;
+    margin-top: -293px;
     z-index: 1;
-    width: 408px;
+    width: 523px;
     height: 217px;
     color: white;
+}
+
+#col{
+border-bottom: 7px solid yellow;
+color: blue;
 }
 
 
@@ -32,10 +39,14 @@
       padding-left: 40px; 
     }
     div.hi{
-      background-color:lightslategrey;
-    color: white;
-    margin: 30px 15px 0px 30px;
+      background-color: gainsboro;
+    color:black;
+    margin: 30px 15px 10px 30px;
     padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
 
     }
     div.body{
@@ -43,22 +54,48 @@
       margin: 0px 30px 0px 30px;
     }
     .notes{
-      background-color: gray;
-      margin-right: 50px;
+      background-color:gray;
+    color:black;
+    margin: 30px 15px 10px 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
       
+    }
+    div.he{
+      background-color: gray;
+    color:white;
+    margin: 25px -40px 10px 77px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    }
+    div.hu{
+      background-color:gainsboro;
+    color:black;
+    margin: 32px -358px 10px 62px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+
     }
   
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar navbar-fixed-top">
+<nav class="navbar navbar-fixed-top" style="background-color:lightgray; border-bottom: 1px solid black;">
   <div class="container-fluid">
     <div class="navbar-header">
     </div>
     <ul class="nav navbar-nav">
       <li><a href="#">Home</a></li>
-      <li class="active"><a href="#">MyStory Films</a></li>
+      <li><a id="col">MyStory Films</a></li>
       <li><a href="#">Why become a Partner at EY</a></li>
       <li><a href="#">Partner Roles and Attributes</a></li>
       <li><a href="#">Partner Measures and Rewards</a></li>
@@ -75,38 +112,36 @@
 </div>
     <div class="row">
         <div class="col-sm-8">
-    <img src="iphone.png" style="width:496px;height:243px;z-index:0;">
+    <img src="iphone.png" style="width:648px;height:320px;z-index:0;padding-top:5px;">
     <!-- carousal-->
             
 <div class="container picmove" > 
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
+      
   
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="Benoit-Laclau.jpg" alt="Los Angeles" style="width:100%;">
-          <h4>Benoit-Laclau</h4>
+          <img src="Benoit-Laclau.jpg" alt="Los Angeles" style="width:100%;position:relative;">
+          <h4 style="position:absolute;margin-top:-50px;margin-left:8px;">Benoit-Laclau</h4>
+          <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
         </div>
   
         <div class="item">
-          <img src="Bob Forsyth.jpg" alt="Chicago" style="width:100%;">
-          <h4>Bob Forsyth</h4>
+          <img src="Bob Forsyth.jpg" alt="Chicago" style="width:100%;position:relative;">
+          <h4 style="position:absolute;margin-top:-50px;margin-left:8px;" >Bob Forsyth</h4>
+          <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
         </div>
       
         <div class="item">
-          <img src="Cameron-Cartmell.jpg" alt="New york" style="width:100%;">
-          <h4>Cameron-Cartmell</h4>
+          <img src="Cameron-Cartmell.jpg" alt="New york" style="width:100%;position:relative;">
+          <h4 style="position:absolute;margin-top:-50px;margin-left:8px;">Cameron-Cartmell</h4>
+          <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
         </div>
         <div class="item">
-            <img src="Amanda-Blackhall-OSullivan.jpg" alt="New york" style="width:100%;">
-            <h4>Amanda-Blackhall-OSullivan</h4>
+            <img src="Amanda-Blackhall-OSullivan.jpg" alt="New york" style="width:100%;position:relative;">
+            <h4 style="position:absolute;margin-top:-50px;margin-left:8px;">Amanda-Blackhall-OSullivan</h4>
+            <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
           </div>
       </div>
   
@@ -119,8 +154,10 @@
   <!-- carousal ends -->
         </div>
 <div class="col-sm-4">
+  
     <form>
       <div class="hi">
+          <h2>Searching for a partner?</h2>
         <div class="form-group">    
           <label for="usr">Name:</label>
           <input type="text" class="form-control" id="usr" placeholder="Partner name">
@@ -129,39 +166,40 @@
         <div class="form-group">
       
             <label for="sel1">Service line:</label>
-            <select class="form-control" id="sel1" placeholder="Select one">
-              <option>1</option>
+            <select class="form-control" id="sel1">
+              <option value="">Select one</option>
               <option>2</option>
               <option>3</option>
               <option>4</option>
             </select>
         </div>
-        <br>
+        <br>  
         <div class="form-group">
             
                 <label for="key">keyword:</label>
                 <input type="Keyword Search" class="form-control" id="key" placeholder="Keyword">
               </div>
       </form>
-      <button type="button" class "btn" > Search</button>
+      <h6 style="color:white">eg. flexible,working etc.</h6>
+      <button type="button" class="btn" style="background-color:black; color:white; margin-left:73%; padding-left:7%;padding-right:7%"> Search</button>
 </div>
     </div>
 <div class="col-sm-1">
-<button type="button" class="btn" >View all films</button>
+<button type="button" class="btn" style="background-color:black; color:white;margin-top:-90px;">View all films</button>
 </div>
 <div class="col-sm-4">
-  <p>click here to see the winning films as voted for by our people and the highlights of the awards ceremony</p> 
+  <p style="margin-top:-50px;">click here to see the winning films as voted for by our people and the highlights of the awards ceremony</p> 
 </div>
       
     </div>
 <div class="body">
   <h2>MyStory film library</h2>
-  <div class="col-sm-8">
-      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+  <div class="col-sm-8" style="margin-top:20px;margin-left:-25px;">
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4 " style="margin-right:10px;margin-bottom:30px;">
           <div class="card">
               <img class="card-img-top" src="Amanda-Blackhall-OSullivan.jpg">
               <div class="card-block">
-                  <h4 class="card-title">Tawshif Ahsan Khan</h4>
+                  <h4 class="card-title">Amanda-Blackhall-OSullivan</h4>
                   
                   <div class="card-text">
                       Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.
@@ -171,7 +209,7 @@
 </div>
           </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4" style="margin-right:10px;margin-bottom:30px;">
           <div class="card">
               <img class="card-img-top" src="Andrew-Wollaston.jpg">
               <div class="card-block">
@@ -185,7 +223,35 @@
 </div>
           </div>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4"style="margin-right:10px;margin-bottom:50px;">
+          <div class="card">
+              <img class="card-img-top" src="Benoit-Laclau.jpg">
+              <div class="card-block">
+                  <h4 class="card-title">Benoit-Laclau</h4>
+                  
+                  <div class="card-text">
+                      Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.
+                  </div>
+      
+
+</div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4"style="margin-right:10px;margin-bottom:50px;">
+          <div class="card">
+              <img class="card-img-top" src="Benoit-Laclau.jpg">
+              <div class="card-block">
+                  <h4 class="card-title">Benoit-Laclau</h4>
+                  
+                  <div class="card-text">
+                      Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.
+                  </div>
+      
+
+</div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4"style="margin-right:10px; margin-bottom:50px;">
           <div class="card">
               <img class="card-img-top" src="Benoit-Laclau.jpg">
               <div class="card-block">
@@ -200,35 +266,52 @@
           </div>
       </div>
   </div>
-  <div class="col-sm-4">
-    <div class="container notes">
-      <h2>Looking for someone in particular?</h2>
-      <p>Search here for stories form partners in your service line or enter in keywords to find other stories that you'd like to view.</p>
-      <h2>Search by</h2>
-      <div class="form-group">    
-          <label for="usr">Name:</label>
-          <input type="text" class="form-control" id="usr" placeholder="Partner name">
-        </div>
-        <br>
-        <div class="form-group">
+  <div class="col-sm-4" style="margin-top:-70px;">
       
-            <label for="sel1">Service line:</label>
-            <select class="form-control" id="sel1" placeholder="Select one">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
-        </div>
-        <br>
-        <div class="form-group">
-            
-                <label for="key">keyword:</label>
-                <input type="Keyword Search" class="form-control" id="key" placeholder="Keyword">
+        <form>
+          <div class="he">
+              <h2 style="font-size:25px;">Looking for someone in particular?</h2>
+              <br>
+              <p>search here for stories from partners in your Service line or enter in keywords to find other stories that you'd like to view.</p>
+            <div class="form-group">    
+              <label for="usr">Name:</label>
+              <input type="text" class="form-control" id="usr" placeholder="Partner name">
+            </div>
+            <br>
+            <div class="form-group">
+          
+                <label for="sel1">Service line:</label>
+                <select class="form-control" id="sel1">
+                  <option value="">Select one</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+            </div>
+            <br>  
+            <div class="form-group">
+                
+                    <label for="key">keyword:</label>
+                    <input type="Keyword Search" class="form-control" id="key" placeholder="Type a keyword">
+                  </div>
+          </form>
+          <h6>eg. Female,LGBT,International experience etc.</h6>
+          <button type="button" class="btn" style="background-color:black; color:white; margin-left:73%; padding-left:7%;padding-right:7%"> Search</button>
+    </div>
+    <div class="col-sm-4">
+      <form>
+        <div class="hu">
+          <h2>have any suggestions</h2>
+          <form>
+              <div class="form-group">
+                <label for="comment" style="font-size:90%">Did you really like a video? Or,would you like to make some recommendations? please write and submit your comments here.</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
               </div>
-<p>e.g. female,LGBT,International experience etc.
-
-  </div>
+              <button type="button" class="btn" style="background-color:black; color:white;margin-left:20px;">Submit</button>
+            </form>
+        </div>
+        </div>
 </div>
+    
 </body>
 </html>
