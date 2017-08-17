@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
   <style>
@@ -84,6 +85,7 @@ color:rgba(57, 102, 191, 1);
     position: relative;
 
     }
+
   
   </style>
 </head>
@@ -150,7 +152,12 @@ color:rgba(57, 102, 191, 1);
       
     </div>
   </div>
-
+  <div class="col-sm-1">
+      <button type="button" class="btn" style="background-color:black; color:white;margin-top:90px;">View all films</button>
+      </div>
+      <div class="col-sm-8">
+        <p style="margin-top:88px; margin-left:45px;">click <a href="https://www.w3schools.com/html/">here</a> to see the winning films as voted for by our people and the highlights of the awards ceremony</p> 
+      </div>
   
   <!-- carousal ends -->
         </div>
@@ -161,42 +168,37 @@ color:rgba(57, 102, 191, 1);
           <h2>Searching for a partner?</h2>
         <div class="form-group">    
           <label for="usr">Name:</label>
-          <input type="text" class="form-control" ng-model="title" placeholder="Partner name">
+          <input type="text" class="form-control" ng-model="query" placeholder="Partner name">
         </div>
         <br>
         <div class="form-group">
       
             <label for="sel1">Service line:</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control" ng-model="service" >
               <option value="">Select one</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
+              <option>Advisory</option>
+              <option>Testing</option>
+              <option>Cyber Security</option>
             </select>
         </div>
         <br>  
         <div class="form-group">
             
                 <label for="key">keyword:</label>
-                <input type="Keyword Search" class="form-control" id="key" placeholder="Keyword">
+                <input type="Keyword Search" class="form-control" ng-model="key" placeholder="Keyword">
               </div>
       </form>
       <h6 style="color:white">eg. flexible,working etc.</h6>
-      <button type="button" class="btn" style="background-color:black; color:white; margin-left:73%; padding-left:7%;padding-right:7%"> Search</button>
+      <button type="button" class="btn" ng-click="search()" style="background-color:black; color:white; margin-left:73%; padding-left:7%;padding-right:7%"> Search</button>
 </div>
     </div>
-<div class="col-sm-1">
-<button type="button" class="btn" style="background-color:black; color:white;margin-top:-90px;">View all films</button>
-</div>
-<div class="col-sm-4">
-  <p style="margin-top:-50px;">click here to see the winning films as voted for by our people and the highlights of the awards ceremony</p> 
-</div>
+
       
     </div>
 <div class="body">
   <h2>MyStory <span style="color:gray;">film library</span></h2>
   <div class="col-sm-8" style="margin-top:20px;margin-left:-25px;">
-    <div ng-repeat="x in tiles|filter:title">
+    <div ng-repeat="x in tiles|filter: {desc:searchQuery2}||{title:searchQuery}||{ser:searchQuery1} ">
        
       <div class="col-sm-6 col-md-4 col-lg-3 mt-4 " style="margin-right:10px;margin-bottom:21px; border: 1px solid black; padding-bottom:30px; background-color:rgba(225, 227, 228, 1); width:30%;">
           <div class="card">
@@ -257,7 +259,8 @@ color:rgba(57, 102, 191, 1);
                 <label for="comment" style="font-size:90%">Did you really like a video? Or,would you like to make some recommendations? please write and submit your comments here.</label>
                 <textarea class="form-control" rows="5" id="comment"></textarea>
               </div>
-              <button type="button" class="btn" style="background-color:black; color:white;margin-left:20px;">Submit</button>
+             <button type="button" class="btn" style="background-color:black; border-right:17px solid rgba(253, 228, 0, 1); color:white; padding-left:7%; width:108px;"> Submit <i class="fa fa-angle-right" style="padding-left:19px; color:black "></i></button>
+              </div>
             </form>
         </div>
         </div>
@@ -267,8 +270,17 @@ color:rgba(57, 102, 191, 1);
     var app= angular.module('myapp',[]);
     app.controller("testctrl",function($scope)
     {
-      $scope.tiles=[{title:"Amanda-Blackhall-OSullivan",desc:" Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Amanda-Blackhall-OSullivan.jpg"},{title:"Andrew-Wollaston",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Andrew-Wollaston.jpg"},{title:"Benoit-Laclau",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Benoit-Laclau.jpg"},{title:"Bob Forsyth",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Bob Forsyth.jpg"},{title:"Cameron-Cartmell",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Cameron-Cartmell.jpg"}]
-    })
+      $scope.tiles=[{title:"Amanda-Blackhall-OSullivan",desc:" Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Amanda-Blackhall-OSullivan.jpg", ser:"Advisory"},{title:"Andrew-Wollaston",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Andrew-Wollaston.jpg",ser:"Testing"},{title:"Benoit-Laclau",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Benoit-Laclau.jpg",ser:"Cyber Security"},{title:"Bob Forsyth",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Bob Forsyth.jpg",ser:"Advisory"},{title:"Cameron-Cartmell",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Cameron-Cartmell.jpg",ser:"Testing"}]
+   
+   
+      $scope.search=function(){
+        $scope.searchQuery2 = angular.copy($scope.key);
+        $scope.searchQuery = angular.copy($scope.query);
+        $scope.searchQuery1 = angular.copy($scope.service);
+        $scope.tilesToFilter=$scope.tiles;
+        $scope.searchReasult=true;
+      }
+       });
     </script>
 
     
