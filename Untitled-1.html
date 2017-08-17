@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+  <style>
+    div.head{
+      background-color: gray;
+    color: white;
+    margin: 73px 30px 0px 30px;
+    padding: 20px;
+    padding-top: 10px;
+    }
+    .picmove{
+    margin-left: 63px;
+    margin-top: -293px;
+    z-index: 1;
+    width: 523px;
+    height: 217px;
+    color: white;
+}
+#col{
+border-bottom: 7px solid yellow;
+color:rgba(57, 102, 191, 1);
+}
+    div.row{
+      background-color:lightgrey;
+      color:black;
+      margin: 0px 30px 0px 30px;
+      padding-left: 40px; 
+    }
+    div.hi{
+      background-color: gainsboro;
+    color:black;
+    margin: 30px 15px 10px 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    }
+    div.body{
+      color: black;
+      margin: 0px 30px 0px 30px;
+    }
+    .notes{
+      background-color:gray;
+    color:black;
+    margin: 30px 15px 10px 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+      
+    }
+    div.he{
+      background-color: gray;
+    color:white;
+    margin: 25px -40px 10px 77px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    }
+    div.hu{
+      background-color:gainsboro;
+    color:black;
+    margin: 32px -358px 10px 62px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    }
+  
+  </style>
+</head>
+<body>
+    <div ng-app="myapp" ng-controller="testctrl">
+
+<nav class="navbar navbar-fixed-top" style="background-color:white; border-bottom: 1px solid black;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav" style="font-weight:700;">
+      <li><a href="#" style="color:gray">Home</a></li>
+      <li><a id="col">MyStory Films</a></li>
+      <li><a href="#" style="color:gray">Why become a Partner at EY</a></li>
+      <li><a href="#" style="color:gray">Partner Roles and Attributes</a></li>
+      <li><a href="#" style="color:gray">Partner Measures and Rewards</a></li>
+      <li><a href="#" style="color:gray">Internal Admissions</a></li>
+      <li><a href="#" style="color:gray">Direct Admissions</a></li>
+      <li><a href="#" style="color:gray">Contacts</a></li>
+    </ul>
+    
+</nav>
+<div class="head">
+ <h1>MyStory: See our Partners as you've never seen them before</h1>
+ <p>As part of vision 2020, we have exciting plans to almost double the size of our Partnership. we want as many of these new partners to be one of you. To share insights into what it takes, Partners from across UK&I,in collaboration with /ey reporters, are sharing their professional and personal stories. see EY partners as you've never seen them before -as children, with their own children,sharing career highs and lows, and why they love being a Partner at EY. watch and enjoy!</p>
+  
+</div>
+    <div class="row">
+        <div class="col-sm-8">
+    <img src="iphone.png" style="width:648px;height:320px;z-index:0;padding-top:5px;">
+    <!-- carousal-->
+            
+<div class="container picmove" > 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="Benoit-Laclau.jpg" alt="Los Angeles" style="width:100%;position:relative;">
+          <h4 style="position:absolute;margin-top:-50px;margin-left:8px;">Benoit-Laclau</h4>
+          <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
+        </div>
+  
+        <div class="item">
+          <img src="Bob Forsyth.jpg" alt="Chicago" style="width:100%;position:relative;">
+          <h4 style="position:absolute;margin-top:-50px;margin-left:8px;" >Bob Forsyth</h4>
+          <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
+        </div>
+      
+        <div class="item">
+          <img src="Cameron-Cartmell.jpg" alt="New york" style="width:100%;position:relative;">
+          <h4 style="position:absolute;margin-top:-50px;margin-left:8px;">Cameron-Cartmell</h4>
+          <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
+        </div>
+        <div class="item">
+            <img src="Amanda-Blackhall-OSullivan.jpg" alt="New york" style="width:100%;position:relative;">
+            <h4 style="position:absolute;margin-top:-50px;margin-left:8px;">Amanda-Blackhall-OSullivan</h4>
+            <h3 style="position:absolute;margin-top:-25px;font-size:15px;margin-left:8px;">Partner,Advisory</h3>
+          </div>
+      </div>
+  
+      <!-- Left and right controls -->
+      
+    </div>
+  </div>
+  <div class="col-sm-1">
+      <button type="button" class="btn" style="background-color:black; color:white;margin-top:90px;">View all films</button>
+      </div>
+      <div class="col-sm-8">
+        <p style="margin-top:88px; margin-left:45px;">click <a href="https://www.w3schools.com/html/">here</a> to see the winning films as voted for by our people and the highlights of the awards ceremony</p> 
+      </div>
+  
+  <!-- carousal ends -->
+        </div>
+<div class="col-sm-4">
+  
+    <form>
+      <div class="hi">
+          <h2>Searching for a partner?</h2>
+        <div class="form-group">    
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" ng-model="query" placeholder="Partner name">
+        </div>
+        <br>
+        <div class="form-group">
+      
+            <label for="sel1">Service line:</label>
+            <select class="form-control" ng-model="service" >
+              <option value="">Select one</option>
+              <option>TAS</option>
+              <option>Advisory</option>
+              <option>Indirect Tax</option>
+              <option>Human Capital Tax</option>
+            </select>
+        </div>
+        <br>  
+        <div class="form-group">
+            
+                <label for="key">keyword:</label>
+                <input type="Keyword Search" class="form-control" ng-model="key" placeholder="Keyword">
+              </div>
+      </form>
+      <h6 style="color:white">eg. flexible,working etc.</h6>
+      <button type="button" class="btn" ng-click="search()" style="background-color:black; color:white; margin-left:73%; padding-left:7%;padding-right:7%"> Search</button>
+</div>
+    </div>
+
+      
+    </div>
+<div class="body">
+  <h2>MyStory <span style="color:gray;">film library</span></h2>
+  <div class="col-sm-8" style="margin-top:20px;margin-left:-25px;">
+    <div ng-repeat="x in tiles|filter:{title:searchQuery}|filter:{desc:searchQuery2}|filter:{ser:searchQuery1}">
+       
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-4 " style="margin-right:10px;margin-bottom:21px; border: 1px solid black; padding-bottom:30px; background-color:rgba(225, 227, 228, 1); width:30%;">
+          <div class="card">
+              <img class="card-img-top" src={{x.ima}} style="margin-left:-16px;margin-top:-1px;width:283px;">
+              <div class="card-block">
+                  <h4 class="card-title"><b>{{x.title}}</b> </h4>
+                  
+                  <div class="card-text">
+                     {{x.desc}}
+                  </div>
+      
+
+             </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4" style="margin-top:-70px;">
+      
+        <form>
+          <div class="he">
+              <h2 style="font-size:25px;">Looking for someone in particular?</h2>
+              <br>
+              <p>search here for stories from partners in your Service line or enter in keywords to find other stories that you'd like to view.</p>
+              <a style="color:white;">Search by:<a style="color:orange; margin-left:60%">Clear filters</a></a>
+            
+            <div class="form-group" style="margin-top:10px">    
+              <label for="usr">Name:</label>
+              <input type="text" class="form-control" id="usr" placeholder="Partner name">
+            </div>
+            <br>
+            <div class="form-group">
+          
+                <label for="sel1">Service line:</label>
+                <select class="form-control" id="sel1">
+                  <option value="">Select one</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+            </div>
+            <br>  
+            <div class="form-group">
+                
+                    <label for="key">keyword:</label>
+                    <input type="Keyword Search" class="form-control" id="key" placeholder="Type a keyword">
+                  </div>
+          </form>
+          <h6>eg. Female,LGBT,International experience etc.</h6>
+          <button type="button" class="btn" style="background-color:black; color:white; margin-left:73%; padding-left:7%;padding-right:7%"> Search</button>
+    </div>
+    <div class="col-sm-4">
+      <form>
+        <div class="hu">
+          <h2>have any suggestions</h2>
+          <form>
+              <div class="form-group">
+                <label for="comment" style="font-size:90%">Did you really like a video? Or,would you like to make some recommendations? please write and submit your comments here.</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+             <button type="button" class="btn" style="background-color:black; border-right:17px solid rgba(253, 228, 0, 1); color:white; padding-left:7%; width:108px;"> Submit <i class="fa fa-angle-right" style="padding-left:19px; color:black "></i></button>
+              </div>
+            </form>
+        </div>
+        </div>
+  </div>
+</div>
+<script>
+    var app= angular.module('myapp',[]);
+    app.controller("testctrl",function($scope)
+    {
+      $scope.tiles=[{title:"Amanda-Blackhall-OSullivan",desc:" Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Amanda-Blackhall-OSullivan.jpg", ser:"TAS"},{title:"Andrew-Wollaston",desc:"Meet Andrew, a partner in TAS. Andrew became a Partner in 1997. He loves spending time in the countryside with his wife and three children. He is an art collector and talks about his family tree",ima:"Andrew-Wollaston.jpg",ser:"TAS"},{title:"Benoit-Laclau",desc:"Meet Benoit, a Partner in Advisory. Benoit shares his dream of running a camp site in the south of France. He also talks about his industry and consulting experiences and why he chose to join EY",ima:"Benoit-Laclau.jpg",ser:"Advisory"},{title:"Bob Forsyth",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Bob Forsyth.jpg",ser:"Indirect Tax<"},{title:"Cameron-Cartmell",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Cameron-Cartmell.jpg",ser:"Human Capital Tax"}]
+   
+   
+      $scope.search=function(){
+        $scope.searchQuery2 = angular.copy($scope.key);
+        $scope.searchQuery = angular.copy($scope.query);
+        $scope.searchQuery1 = angular.copy($scope.service);
+        $scope.tilesToFilter=$scope.tiles;
+        $scope.searchReasult=true;
+      }
+       });
+    </script>
+
+    
+</body>
+</html>
