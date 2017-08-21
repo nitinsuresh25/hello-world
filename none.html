@@ -1,0 +1,217 @@
+<html>
+  <head>
+
+
+
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <style>
+                  /* The Modal (background) */
+                  .modal {
+                      display: none; /* Hidden by default */
+                      position: fixed; /* Stay in place */
+                      z-index: 1; /* Sit on top */
+                      padding-top: 6px; /* Location of the box */
+                      left: 0;
+                      top: 0;
+                      margin-left: 350px;
+                      width: 50%; /* Full width */
+                      height: 100%; /* Full height */
+                      overflow: auto; /* Enable scroll if needed */
+                       
+                      
+                  }
+                  
+                  /* Modal Content */
+                  .modal-content {
+                      background-color: #fefefe;
+                      margin: auto;
+                      padding: 20px;
+                      border: 1px solid #888;
+                      width: 80%;
+                  }
+                  
+                  /* The Close Button */
+                  .close {
+                      color: #aaaaaa;
+                      float: right;
+                      font-size: 28px;
+                      font-weight: bold;
+                  }
+                  
+                  .close:hover,
+                  .close:focus {
+                      color: #000;
+                      text-decoration: none;
+                      cursor: pointer;
+                  }
+                  .btn{
+                    margin-left: 30px;
+                  }
+                  </style>
+                  
+
+    
+  </head>
+<body>
+  <div class="container-fluid"style="padding:100px; ">
+      <div class="form-group  "style="padding=80px; width:50%; margin-left:"289px"";>
+             
+             <label for="name">Name</label>
+             <input id="name" type="text"class="form-control"value="" placeholder="Name"></input><br>
+             <label for="adr">Address</label>
+             <textarea class="form-control" rows="5"value="" id="adr"></textarea>
+             <label for="gender">Gender</label><br>
+             <input type="radio" name="gender" value="male"value="" checked> Male<br>
+             <input type="radio" name="gender" value="" value="female"> Female<br>
+             <input type="radio" name="gender" value="" value="other"> Other<br>
+             <label for="phone">Phone No.</label>
+             <input id="phone" type="text"class="form-control" value=""></input><br>
+             <label for="email">Email ID</label>
+             <input id="email" type="email"class="form-control"value=""></input><br>
+             <label for="dob">DOB</label>
+             <input id="dob" type="date" class="form-control" value="" ></input><br>
+             <label for="qual">Qualification</label>
+             <input id="qual" type="text"class="form-control" value="" ></input><br>
+             <label for="cgpa">CGPA</label>
+             <input id="cgpa" type="text"class="form-control" value="" ></input><br>
+             <label for="clg">College Name</label>
+             <input id="clg" type="text"class="form-control" value=" " ></input><br>
+             <label for="">University</label>
+             <select id="uni" value=""class="form-control"type="text"><option>MG</option><option>kerala</option><option>cusat</option></select><br>
+             <button type="button"  id="sbtn"  class="btn">Submit</button>
+             <label class="col-md-1 control-label" for="submit"></label>
+             <button type="button"  id="pbtn" class="btn">Save</button>
+             <label class="col-md-1 control-label" for="submit"></label>
+             <button type="button"  id="dbtn" class="btn">Display</button>
+             <button type="button"  id="cbtn"  class="btn">Cancel</button>
+      </div>
+     
+  </div>
+  <div id="myModal" class="modal">
+          
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+
+              <label for="name1">Name</label>
+              <p id="name1"></p><br>
+             <label for="adr1">Address</label>
+              <p id="adr1"></p>
+            <!--  <label for="gender1">Gender</label>
+              <p id="gender1"></p><br>-->
+              <label for="phone1">Phone No.</label>
+              <p id="phone1"></p><br>
+              <label for="email1">Email ID</label>
+              <p id="email1" ></p><br>
+              <label for="dob1">DoB</label>
+              <p id="dob1"></p><br>
+              <label for="qual1">Qualification</label>
+              <p id="qual1"></p><br>
+              <label for="cgpa1">CGPA</label>
+              <p id="cgpa1"></p><br>
+              <label for="clg1">College Name</label>
+              <p id="clg1"></p><br>
+              <label for="uni1">University</label>
+              <p id="uni1"></p><br>
+            </div>
+          
+          </div>
+</body>
+<script>
+var pname;
+var padr;
+var pphone;
+var pgender;
+var pemail;
+var pdob;
+var pqual;
+var pcgpa;
+var pclg;
+var puni;
+// Get the modal
+var modal = document.getElementById('myModal');
+// Get the button that opens the modal
+var sbtn = document.getElementById("sbtn");
+var cbtn = document.getElementById("cbtn");
+var pbtn = document.getElementById("pbtn");
+var dbtn = document.getElementById("dbtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+sbtn.onclick = function() {
+  
+document.getElementById("name").value="nitin";
+document.getElementById("adr").value="trivandrum";
+document.getElementById("phone").value="1234567890";
+document.getElementById("email").value="nitinsuresh87@gmail.com";
+document.getElementById("dob").value="12-15-1995";
+document.getElementById("qual").value="b.tech";
+document.getElementById("cgpa").value="7";
+document.getElementById("clg").value="college of engg cherthala";
+document.getElementById("uni").value="cusat";
+
+}
+// When the user clicks the button, open the modal 
+pbtn.onclick = function() {
+  pname=document.getElementById("name").value;
+padr=document.getElementById("adr").value;
+/*pgender=document.getElementById("gender").value;*/
+pphone=document.getElementById("phone").value;
+pemail=document.getElementById("email").value;
+pdob=document.getElementById("dob").value;
+pqual=document.getElementById("qual").value;
+pcgpa=document.getElementById("cgpa").value;
+pclg=document.getElementById("clg").value;
+puni=document.getElementById("uni").value;
+}
+dbtn.onclick = function() {
+  pname=document.getElementById("name").value;
+padr=document.getElementById("adr").value;
+pphone=document.getElementById("phone").value;
+pemail=document.getElementById("email").value;
+pdob=document.getElementById("dob").value;
+pqual=document.getElementById("qual").value;
+pcgpa=document.getElementById("cgpa").value;
+pclg=document.getElementById("clg").value;
+puni=document.getElementById("uni").value;
+document.getElementById("name1").innerHTML=pname;
+document.getElementById("adr1").innerHTML=padr;
+document.getElementById("phone1").innerHTML=pphone;
+document.getElementById("email1").innerHTML=pemail;
+document.getElementById("dob1").innerHTML=pdob;
+document.getElementById("qual1").innerHTML=pqual;
+document.getElementById("cgpa1").innerHTML=pcgpa;
+document.getElementById("clg1").innerHTML=pclg;
+document.getElementById("uni1").innerHTML=puni;
+  modal.style.display = "block";
+}
+cbtn.onclick = function() {
+document.getElementById("name").value="";
+document.getElementById("adr").value="";
+document.getElementById("phone").value="";
+document.getElementById("email").value="";
+document.getElementById("dob").value="";
+document.getElementById("qual").value="";
+document.getElementById("cgpa").value="";
+document.getElementById("clg").value="";
+document.getElementById("uni").value="";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
+ 
+</html>
