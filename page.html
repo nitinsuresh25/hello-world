@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="style.css" />
+            <script>
+                $( document ).ready(function(){
+
+	$('button').click(function(){
+		$('#cover, #cover_back').toggleClass('turn');
+    });
+    $('button1').click(function(){
+		$('#cover, #cover_back').toggleClass('turn');
+	});
+
+});
+            </script>
+    </head>
+    <body>
+            <div ng-app="myapp" ng-controller="testctrl">
+                <div class="main">
+        <div class="page odd" id="cover"></div>
+        <div class="page even" id="cover_back"><h1>
+                Content</h1>
+                <div ng-repeat="x in tiles">
+                <div class="card">
+                        <img src="{{x.ima}}" alt="Avatar" style="width:100%">
+                        <div class="container">
+                          <h4><b>{{x.title}}</b></h4> 
+                          <p>{{x.desc}}</p> 
+                        </div>
+                      </div>    
+                    </div>
+        </div>
+        <div class="page odd" id="content"><h1>
+                Content</h1>
+                <div ng-repeat="x in tiles">
+                        <div class="card">
+                                <img src="{{x.ima}}" alt="Avatar" style="width:100%">
+                                <div class="container">
+                                  <h4><b>{{x.title}}</b></h4> 
+                                  <p>{{x.desc}}</p> 
+                                </div>
+                              </div>    
+                            </div>
+            </div>
+        <button class="but">Turn page</button>
+        <script>
+                var app= angular.module('myapp',[]);
+                app.controller("testctrl",function($scope)
+                {
+                    $scope.tiles=[{title:"Amanda-Blackhall-OSullivan",desc:" Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Amanda-Blackhall-OSullivan.jpg", ser:"TAS"},{title:"Andrew-Wollaston",desc:"Meet Andrew, a partner in TAS. Andrew became a Partner in 1997. He loves spending time in the countryside with his wife and three children. He is an art collector and talks about his family tree",ima:"Andrew-Wollaston.jpg",ser:"TAS"},{title:"Benoit-Laclau",desc:"Meet Benoit, a Partner in Advisory. Benoit shares his dream of running a camp site in the south of France. He also talks about his industry and consulting experiences and why he chose to join EY",ima:"Benoit-Laclau.jpg",ser:"Advisory"},{title:"Bob Forsyth",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Bob Forsyth.jpg",ser:"Indirect Tax<"},{title:"Cameron-Cartmell",desc:"Meet Amanda, a TAS partner. She decided to make London her home following a 2 year secondment from Australia. she discusses rescuing firms, activities outside of work and her secret shoe collection.",ima:"Cameron-Cartmell.jpg",ser:"Human Capital Tax"}]
+   
+               
+               
+                  $scope.search=function(){
+                    $scope.searchQuery2 = angular.copy($scope.key);
+                    $scope.searchQuery = angular.copy($scope.query);
+                    $scope.searchQuery1 = angular.copy($scope.service);
+                    $scope.tilesToFilter=$scope.tiles;
+                    $scope.searchReasult=true;
+                  }
+                   });
+                </script>
+    </body>
+</html>
